@@ -23,18 +23,6 @@ services:
     networks:
       - php-app-network
 
-  db:
-    image: mysql:latest
-    environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: journaldb
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-    volumes:
-      - db_data:/var/lib/mysql
-    networks:
-      - php-app-network
-
 networks:
   php-app-network:
     driver: bridge

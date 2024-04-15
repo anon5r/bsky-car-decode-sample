@@ -3,8 +3,6 @@ FROM php:8.3-fpm-bookworm
 # Install system dependencies
 RUN apt update && apt upgrade -y && apt install -y \
     curl \
-    libpng-dev \
-    libwebp-dev \
     libzip-dev \
     libxml2-dev \
     libonig-dev \
@@ -13,7 +11,7 @@ RUN apt update && apt upgrade -y && apt install -y \
     git
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+RUN docker-php-ext-install mbstring pcntl
 
 
 # Copy golang
