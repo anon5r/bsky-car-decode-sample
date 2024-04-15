@@ -1,0 +1,4 @@
+/vendor/
+/public/repo_*
+/public/did:plc:*
+/.composer

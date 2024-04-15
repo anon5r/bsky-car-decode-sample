@@ -1,0 +1,43 @@
+version: '3'
+services:
+  php-app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: php-car-decoder
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+
+    networks:
+      - php-app-network
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - .:/app
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 8300:80
+    networks:
+      - php-app-network
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: journaldb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - php-app-network
+
+networks:
+  php-app-network:
+    driver: bridge
+
+volumes:
+  db_data:
