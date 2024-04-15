@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectUserFactors">
+    <factor id="completionFinishedType">
+      <dailyData date="27-10-2023">
+        <observation name="cancelled" value="1.0" />
+        <observation name="typedSelect" value="1.0" />
+      </dailyData>
+    </factor>
+    <factor id="completionType">
+      <dailyData date="27-10-2023">
+        <observation name="BASIC" value="2.0" />
+      </dailyData>
+    </factor>
+    <factor id="completionUsage">
+      <dailyData date="27-10-2023">
+        <observation name="count" value="2.0" />
+      </dailyData>
+    </factor>
+    <factor id="fullLineFactors" />
+    <factor id="itemPosition" />
+    <factor id="mnemonicsUsage" />
+    <factor id="prefixLength" />
+    <factor id="prefixMatchingType" />
+    <factor id="templatesUsage" />
+    <factor id="timeBetweenTyping">
+      <dailyData date="27-10-2023">
+        <observation name="average" value="425.0" />
+        <observation name="count" value="7.0" />
+      </dailyData>
+    </factor>
+  </component>
+</project>
